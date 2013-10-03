@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    artoo-sdl-joystick (0.1.0)
+    artoo-joystick (0.1.0)
       artoo (>= 1.2.2)
       rubysdl
 
@@ -55,7 +55,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  artoo-sdl-joystick!
+  artoo-joystick!
   minitest (>= 5.0)
   minitest-happy
   mocha (>= 0.14.0)
