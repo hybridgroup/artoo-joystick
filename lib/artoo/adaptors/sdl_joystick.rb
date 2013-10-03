@@ -6,17 +6,27 @@ module Artoo
     # @see device documentation for more information
     class SdlJoystick < Adaptor
       finalizer :finalize
-      attr_reader :device
+      attr_reader :joystick
 
       # Closes connection with device if connected
       # @return [Boolean]
       def finalize
         disconnect if connected?
+        ::SDL.quit
       end
 
       # Creates a connection with device
       # @return [Boolean]
       def connect
+        require 'sdl' unless defined?(::SDL)
+
+        ::SDL.init( ::SDL::INIT_JOYSTICK )
+        ::SDL::Joystick.poll = false
+
+        raise "No SDL joystick available" if ::SDL::Joystick.num == 0
+        
+        @joystick = ::SDL::Joystick.open(0) # TODO: allow user to choose which joystick
+
         super
       end
 
@@ -28,8 +38,8 @@ module Artoo
 
       # Name of device
       # @return [String]
-      def name
-        "sdl-joystick"
+      def firmware_name
+        joystick.index_name(0)
       end
 
       # Version of device
@@ -38,10 +48,14 @@ module Artoo
         Artoo::SdlJoystick::VERSION
       end
 
+      def poll
+        ::SDL::Joystick.update_all
+      end
+
       # Uses method missing to call device actions
       # @see device documentation
       def method_missing(method_name, *arguments, &block)
-        device.send(method_name, *arguments, &block)
+        joystick.send(method_name, *arguments, &block)
       end
     end
   end

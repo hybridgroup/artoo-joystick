@@ -20,7 +20,14 @@ module Artoo
         end
       end
 
-      def handle_message_events         
+      def handle_message_events
+        connection.poll
+
+        x = connection.axis(0)
+        y = connection.axis(1)
+        
+        publish(event_topic_name("update"), "joystick", {:x => x, :y => y})
+        publish(event_topic_name("joystick"), {:x => x, :y => y})
       end
 
     end
