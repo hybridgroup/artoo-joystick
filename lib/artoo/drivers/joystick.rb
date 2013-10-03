@@ -26,7 +26,7 @@ module Artoo
       def handle_message_events
         connection.poll
         handle_joystick
-        handle_trackball
+        #handle_trackball
         handle_buttons
       end
 
