@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Ron Evans"]
   s.email       = ["artoo@hybridgroup.com"]
   s.homepage    = "https://github.com/hybridgroup/artoo-sdl-joystick"
-  s.summary     = %q{Artoo adaptor and driver for SDL joysticks}
-  s.description = %q{Artoo adaptor and driver for SDL joysticks}
+  s.summary     = %q{Artoo adaptor and driver for SDL joysticks and game controllers}
+  s.description = %q{Artoo adaptor and driver for SDL joysticks and game controllers}
   s.license     = 'Apache 2.0'
 
   s.rubyforge_project = "artoo-sdl-joystick"

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    artoo-sdl-joystick (0.0.1)
+    artoo-sdl-joystick (0.1.0)
       artoo (>= 1.2.2)
       rubysdl
 
