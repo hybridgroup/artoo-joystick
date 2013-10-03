@@ -3,7 +3,7 @@ PATH
   specs:
     artoo-joystick (0.1.0)
       artoo (>= 1.2.2)
-      ruby-sdl-ffi
+      hybridgroup-ruby-sdl-ffi
 
 GEM
   remote: http://rubygems.org/
@@ -23,9 +23,13 @@ GEM
       nio4r (>= 0.5.0)
     coderay (1.0.9)
     ffi (1.9.0)
+    ffi (1.9.0-java)
     http (0.5.0)
       http_parser.rb
     http_parser.rb (0.6.0.beta.2)
+    http_parser.rb (0.6.0.beta.2-java)
+    hybridgroup-ruby-sdl-ffi (0.4.1)
+      nice-ffi (>= 0.2)
     metaclass (0.0.1)
     method_source (0.8.2)
     minitest (5.0.8)
@@ -36,10 +40,16 @@ GEM
     nice-ffi (0.4)
       ffi (>= 0.5.0)
     nio4r (0.5.0)
+    nio4r (0.5.0-java)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
+    pry (0.9.12.2-java)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+      spoon (~> 0.0)
     rake (10.1.0)
     reel (0.4.0)
       celluloid (>= 0.15.1)
@@ -47,15 +57,16 @@ GEM
       http (>= 0.5.0)
       http_parser.rb (>= 0.6.0.beta.2)
       websocket_parser (>= 0.1.4)
-    ruby-sdl-ffi (0.4)
-      nice-ffi (>= 0.2)
     slop (3.4.6)
+    spoon (0.0.4)
+      ffi
     thor (0.18.1)
     timers (1.1.0)
     websocket_parser (0.1.4)
       http
 
 PLATFORMS
+  java
   ruby
 
 DEPENDENCIES
