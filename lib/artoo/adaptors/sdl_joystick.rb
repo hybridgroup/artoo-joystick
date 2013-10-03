@@ -52,6 +52,10 @@ module Artoo
         ::SDL::Joystick.update_all
       end
 
+      def number_joysticks
+        ::SDL::Joystick.num
+      end
+
       # Uses method missing to call device actions
       # @see device documentation
       def method_missing(method_name, *arguments, &block)
