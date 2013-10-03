@@ -1,4 +1,4 @@
 require File.expand_path(File.dirname(__FILE__) + "/../test_helper")
-require 'artoo/adaptors/sdl_joystick'
+require 'artoo/adaptors/joystick'
 
 # TODO: test for your adaptor goes here...
