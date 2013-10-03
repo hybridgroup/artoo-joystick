@@ -2,7 +2,7 @@ require 'artoo/adaptors/adaptor'
 
 module Artoo
   module Adaptors
-    # Connect to a sdl-joystick device
+    # Connect to a joystick device
     # @see device documentation for more information
     class SdlJoystick < Adaptor
       finalizer :finalize
