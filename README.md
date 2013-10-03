@@ -1,19 +1,19 @@
-# Artoo Adaptor For SDL Joysticks & Game Controllers
+# Artoo Adaptor For Joysticks & Game Controllers
 
-This repository contains the Artoo (http://artoo.io/) adaptor for Simple DirectMedia Layer(SDL) compatible joysticks and game controllers. 
+This repository contains the Artoo (http://artoo.io/) adaptor for joysticks and game controllers that are compatible with Simple DirectMedia Layer (SDL). 
 
 Artoo is a open source micro-framework for robotics using Ruby.
 
-For more information abut Artoo, check out our repo at https://github.com/hybridgroup/artoo
+For more information about Artoo, check out our repo at https://github.com/hybridgroup/artoo
 
-The artoo-sdl-joystick adaptor is based on the rubysdl gem (http://www.kmc.gr.jp/~ohai/rubysdl.en.html).
+The artoo-joystick adaptor uses the rubysdl gem (http://www.kmc.gr.jp/~ohai/rubysdl.en.html).
 
-[![Code Climate](https://codeclimate.com/github/hybridgroup/artoo-sdl-joystick.png)](https://codeclimate.com/github/hybridgroup/artoo-sdl-joystick) [![Build Status](https://travis-ci.org/hybridgroup/artoo-sdl-joystick.png?branch=master)](https://travis-ci.org/hybridgroup/artoo-sdl-joystick)
+[![Code Climate](https://codeclimate.com/github/hybridgroup/artoo-joystick.png)](https://codeclimate.com/github/hybridgroup/artoo-joystick) [![Build Status](https://travis-ci.org/hybridgroup/artoo-joystick.png?branch=master)](https://travis-ci.org/hybridgroup/artoo-joystick)
 
 ## Installing
 
 ```
-gem install artoo-sdl-joystick
+gem install artoo-joystick
 ```
 
 ## Using
@@ -21,8 +21,8 @@ gem install artoo-sdl-joystick
 ```ruby
 require 'artoo'
 
-connection :joystick, :adaptor => :sdl_joystick
-device :controller, :driver => :sdl_joystick, :connection => :joystick, :interval => 0.1
+connection :joystick, :adaptor => :joystick
+device :controller, :driver => :joystick, :connection => :joystick, :interval => 0.1
 
 work do
   on controller, :joystick => proc { |*value|
