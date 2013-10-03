@@ -4,7 +4,7 @@ module Artoo
   module Adaptors
     # Connect to a joystick device
     # @see device documentation for more information
-    class SdlJoystick < Adaptor
+    class Joystick < Adaptor
       finalizer :finalize
       attr_reader :joystick
 

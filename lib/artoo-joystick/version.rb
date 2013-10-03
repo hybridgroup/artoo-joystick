@@ -1,5 +1,5 @@
 module Artoo
-  module SdlJoystick
+  module Joystick
     VERSION = '0.1.0'
   end
 end

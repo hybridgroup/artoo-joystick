@@ -3,7 +3,7 @@ require 'artoo/drivers/driver'
 module Artoo
   module Drivers
     # The sdl-joystick driver behaviors
-    class SdlJoystick < Driver
+    class Joystick < Driver
       attr_reader :button_values
 
       # Start driver and any required connections
