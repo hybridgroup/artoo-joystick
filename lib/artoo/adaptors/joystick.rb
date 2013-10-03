@@ -19,7 +19,7 @@ module Artoo
       def connect
         require 'ruby-sdl-ffi' unless defined?(::SDL)
 
-        #::SDL.init( ::SDL::INIT_JOYSTICK )
+        ::SDL.Init( ::SDL::INIT_JOYSTICK )
 
         raise "No SDL joystick available" if num_joysticks == 0
         
