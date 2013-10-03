@@ -31,11 +31,15 @@ module Artoo
       end
 
       def handle_joystick
-        x = connection.axis(0)
-        y = connection.axis(1)
+        number_sticks = connection.num_axes / 2
+        number_sticks.times {|s|
+          x = connection.axis(s * 2)
+          y = connection.axis(s * 2 + 1)
         
-        publish(event_topic_name("update"), "joystick", {:x => x, :y => y})
-        publish(event_topic_name("joystick"), {:x => x, :y => y})
+          publish(event_topic_name("update"), "joystick", {:x => x, :y => y, :s => s})
+          publish(event_topic_name("joystick"), {:x => x, :y => y, :s => s})
+          publish(event_topic_name("joystick_#{s}"), {:x => x, :y => y})
+        }
       end
 
       def handle_trackball
