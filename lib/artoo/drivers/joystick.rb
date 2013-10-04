@@ -27,6 +27,7 @@ module Artoo
         connection.poll
         handle_joystick
         # TODO: handle_trackball
+        # TODO: handle_hats
         handle_buttons
       end
 
@@ -36,9 +37,7 @@ module Artoo
           x = connection.axis(s * 2)
           y = connection.axis(s * 2 + 1)
         
-          publish(event_topic_name("update"), "joystick", {:x => x, :y => y, :s => s})
-          publish(event_topic_name("joystick"), {:x => x, :y => y, :s => s})
-          publish(event_topic_name("joystick_#{s}"), {:x => x, :y => y})
+          publish_joystick(s, x, y)
         }
       end
 
@@ -56,13 +55,23 @@ module Artoo
           currently_pressed = connection.button(b)
           if button_values[b] != currently_pressed
             button_values[b] = currently_pressed
-            if currently_pressed
-              publish(event_topic_name("update"), "button", b)
-              publish(event_topic_name("button"), b)
-              publish(event_topic_name("button_#{b}"))
+            if currently_pressed == 1
+              publish_button(b)
             end
           end
         }
+      end
+
+      def publish_joystick(s, x, y)
+        publish(event_topic_name("update"), "joystick", {:x => x, :y => y, :s => s})
+        publish(event_topic_name("joystick"), {:x => x, :y => y, :s => s})
+        publish(event_topic_name("joystick_#{s}"), {:x => x, :y => y})
+      end
+
+      def publish_button(b)
+        publish(event_topic_name("update"), "button", b)
+        publish(event_topic_name("button"), b)
+        publish(event_topic_name("button_#{b}"))
       end
     end
   end
