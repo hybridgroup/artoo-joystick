@@ -31,7 +31,7 @@ module Artoo
       # Closes connection with device
       # @return [Boolean]
       def disconnect
-        ::SDL.JoystickClose(@joystick)
+        ::SDL.JoystickClose(joystick)
         super
       end
 
@@ -56,35 +56,35 @@ module Artoo
       end
 
       def num_axes
-        ::SDL.JoystickNumAxes(@joystick)
+        ::SDL.JoystickNumAxes(joystick)
       end
 
       def axis(n)
-        ::SDL.JoystickGetAxis(@joystick, n)
+        ::SDL.JoystickGetAxis(joystick, n)
       end
 
       def num_balls
-        ::SDL.JoystickNumBalls(@joystick)
+        ::SDL.JoystickNumBalls(joystick)
       end
 
       def ball(n)
-        ::SDL.JoystickGetBall(@joystick, n)
+        ::SDL.JoystickGetBall(joystick, n)
       end
 
       def num_hats
-        ::SDL.JoystickNumHats(@joystick)
+        ::SDL.JoystickNumHats(joystick)
       end
 
       def hat(n)
-        ::SDL.JoystickGetHat(@joystick, n)
+        ::SDL.JoystickGetHat(joystick, n)
       end
 
       def num_buttons
-        ::SDL.JoystickNumButtons(@joystick)
+        ::SDL.JoystickNumButtons(joystick)
       end
 
       def button(n)
-        ::SDL.JoystickGetButton(@joystick, n)
+        ::SDL.JoystickGetButton(joystick, n)
       end
     end
   end

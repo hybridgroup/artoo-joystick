@@ -2,13 +2,13 @@ PATH
   remote: .
   specs:
     artoo-joystick (0.1.0)
-      artoo (>= 1.2.2)
+      artoo (>= 1.3.0)
       hybridgroup-ruby-sdl-ffi
 
 GEM
   remote: http://rubygems.org/
   specs:
-    artoo (1.2.2)
+    artoo (1.3.0)
       celluloid (~> 0.15.0)
       celluloid-io (~> 0.15.0)
       multi_json (~> 1.6)
