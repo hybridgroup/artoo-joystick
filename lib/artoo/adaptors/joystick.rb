@@ -86,12 +86,6 @@ module Artoo
       def button(n)
         ::SDL.JoystickGetButton(@joystick, n)
       end
-
-      # Uses method missing to call device actions
-      # @see device documentation
-      # def method_missing(method_name, *arguments, &block)
-      #   joystick.send(method_name, *arguments, &block)
-      # end
     end
   end
 end
