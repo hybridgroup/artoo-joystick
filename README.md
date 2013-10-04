@@ -1,6 +1,6 @@
 # Artoo Adaptor For Joysticks & Game Controllers
 
-This repository contains the Artoo (http://artoo.io/) adaptor for joysticks and game controllers that are compatible with Simple DirectMedia Layer (SDL). 
+This repository contains the Artoo (http://artoo.io/) adaptor for joysticks and game controllers that are compatible with Simple DirectMedia Layer (SDL) (http://www.libsdl.org/). 
 
 Artoo is a open source micro-framework for robotics using Ruby.
 
