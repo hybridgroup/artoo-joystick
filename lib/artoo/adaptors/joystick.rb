@@ -5,14 +5,7 @@ module Artoo
     # Connect to a joystick device
     # @see device documentation for more information
     class Joystick < Adaptor
-      finalizer :finalize
       attr_reader :joystick
-
-      # Closes connection with device if connected
-      # @return [Boolean]
-      def finalize
-        disconnect if connected?
-      end
 
       # Creates a connection with device
       # @return [Boolean]
@@ -22,7 +15,7 @@ module Artoo
         ::SDL.Init( ::SDL::INIT_JOYSTICK )
 
         raise "No SDL joystick available" if num_joysticks == 0
-        
+
         @joystick = ::SDL.JoystickOpen(0) # TODO: allow user to choose which joystick
 
         super
