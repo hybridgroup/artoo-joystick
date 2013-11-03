@@ -49,7 +49,7 @@ module Artoo
       end
 
       def button_letter(b)
-        BUTTON_MAP[b]
+        button_map[b]
       end
 
       def button_map
