@@ -4,7 +4,25 @@ module Artoo
   module Drivers
     # The Xbox360 controller driver behaviors
     class Xbox360 < Artoo::Drivers::Joystick
-      BUTTON_MAP = {
+      TATTIEBOGLE_BUTTON_MAP = {
+        0 => "dpad_up",
+        1 => "dpad_down",
+        2 => "dpad_left",
+        3 => "dpad_right",
+        4 => "start",
+        5 => "back",
+        6 => "j0",
+        7 => "j1",
+        8 => "lb",
+        9 => "rb",
+        10 => "xbox",
+        11 => "a",
+        12 => "b",
+        13 => "x",
+        14 => "y"
+      }
+
+      DEFAULT_BUTTON_MAP = {
         0 => 'a',
         1 => 'b',
         2 => 'x',
@@ -14,26 +32,6 @@ module Artoo
         6 => 'back',
         7 => 'start'
       }
-
-      if additional_params[:usb_driver] == :tattiebogle
-          BUTTON_MAP = {
-              0 => "dpad_up",
-              1 => "dpad_down",
-              2 => "dpad_left",
-              3 => "dpad_right",
-              4 => "start",
-              5 => "back",
-              6 => "j0",
-              7 => "j1",
-              8 => "lb",
-              9 => "rb",
-              10 => "xbox",
-              11 => "a",
-              12 => "b",
-              13 => "x",
-              14 => "y"
-          }
-      end
 
       def handle_joystick
         x0 = connection.axis(0)
@@ -52,6 +50,14 @@ module Artoo
 
       def button_letter(b)
         BUTTON_MAP[b]
+      end
+
+      def button_map
+        if additional_params[:usb_driver] == :tattiebogle
+          TATTIEBOGLE_BUTTON_MAP
+        else
+          DEFAULT_BUTTON_MAP
+        end
       end
     end
   end
