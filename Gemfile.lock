@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/mikejford/ruby-sdl-ffi
+  revision: 96159e437b22e44c80754a67bfd337397ee0aa7a
+  specs:
+    hybridgroup-ruby-sdl-ffi (0.4.1)
+      nice-ffi (>= 0.2)
+
 PATH
   remote: .
   specs:
@@ -28,8 +35,6 @@ GEM
       http_parser.rb
     http_parser.rb (0.6.0.beta.2)
     http_parser.rb (0.6.0.beta.2-java)
-    hybridgroup-ruby-sdl-ffi (0.4.1)
-      nice-ffi (>= 0.2)
     metaclass (0.0.1)
     method_source (0.8.2)
     minitest (5.0.8)
@@ -71,6 +76,7 @@ PLATFORMS
 
 DEPENDENCIES
   artoo-joystick!
+  hybridgroup-ruby-sdl-ffi!
   minitest (>= 5.0)
   minitest-happy
   mocha (>= 0.14.0)
