@@ -4,6 +4,8 @@ module Artoo
   module Drivers
     # The sdl-joystick driver behaviors
     class Joystick < Driver
+      COMMANDS = [:button_values].freeze
+
       attr_reader :button_values
 
       # Start driver and any required connections

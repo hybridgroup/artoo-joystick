@@ -4,6 +4,8 @@ module Artoo
   module Drivers
     # The Xbox360 controller driver behaviors
     class Xbox360 < Artoo::Drivers::Joystick
+      COMMANDS = (Artoo::Drivers::Joystick::COMMANDS + [:button_map]).freeze
+
       TATTIEBOGLE_MAP = {
         :button_map => {
           0 => :dpad_up,
