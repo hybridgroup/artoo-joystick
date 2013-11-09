@@ -36,7 +36,7 @@ module Artoo
         number_sticks.times {|s|
           x = connection.axis(s * 2)
           y = connection.axis(s * 2 + 1)
-        
+
           publish_joystick(s, x, y)
         }
       end
@@ -44,7 +44,7 @@ module Artoo
       def handle_trackball
         if connection.num_balls == 1
           x, y = connection.ball(0)
-        
+
           publish(event_topic_name("update"), "trackball", {:x => x, :y => y})
           publish(event_topic_name("trackball"), {:x => x, :y => y})
         end
@@ -55,9 +55,7 @@ module Artoo
           currently_pressed = connection.button(b)
           if button_values[b] != currently_pressed
             button_values[b] = currently_pressed
-            if currently_pressed == 1
-              publish_button(b)
-            end
+            publish_button(b)
           end
         }
       end
@@ -69,9 +67,11 @@ module Artoo
       end
 
       def publish_button(b)
-        publish(event_topic_name("update"), "button", b)
-        publish(event_topic_name("button"), b)
-        publish(event_topic_name("button_#{b}"))
+        if button_values[b] == 1
+          publish(event_topic_name("update"), "button", b)
+          publish(event_topic_name("button"), b)
+          publish(event_topic_name("button_#{b}"))
+        end
       end
     end
   end

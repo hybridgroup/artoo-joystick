@@ -28,4 +28,10 @@ work do
   on controller, :button_y => proc { |*value|
     puts "why!"
   }
+  on controller, :button_rb => proc { |*value|
+    puts "Right Button down"
+  }
+  on controller, :button_up_rb => proc { |*value|
+    puts "Right Button up"
+  }
 end

@@ -31,7 +31,11 @@ module Artoo
       end
 
       def publish_button(b)
-        publish(event_topic_name("button_#{button_letter(b)}"))
+        if button_values[b] == 1
+          publish(event_topic_name("button_#{button_letter(b)}"))
+        else
+          publish(event_topic_name("button_up_#{button_letter(b)}"))
+        end
         super
       end
 
