@@ -4,7 +4,7 @@ module Artoo
   module Drivers
     # The sdl-joystick driver behaviors
     class Joystick < Driver
-      COMMANDS = [:button_values].freeze
+      COMMANDS = [:currently_pressed?].freeze
 
       attr_reader :button_values
 
@@ -23,6 +23,10 @@ module Artoo
           Logger.error e.message
           Logger.error e.backtrace.inspect
         end
+      end
+
+      def currently_pressed?(b)
+        button_values[b]
       end
 
       def handle_message_events

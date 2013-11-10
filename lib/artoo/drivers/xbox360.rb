@@ -4,8 +4,6 @@ module Artoo
   module Drivers
     # The Xbox360 controller driver behaviors
     class Xbox360 < Artoo::Drivers::Joystick
-      COMMANDS = (Artoo::Drivers::Joystick::COMMANDS + [:button_map]).freeze
-
       TATTIEBOGLE_MAP = {
         :button_map => {
           0 => :dpad_up,
@@ -53,6 +51,14 @@ module Artoo
         }
       }
 
+      def currently_pressed?(b)
+        if button_map.has_value?(b)
+          button_values[button_map.key(b)]
+        else
+          super b
+        end
+      end
+
       def handle_joystick
         x0 = connection.axis(axis_map[:j0_x])
         y0 = connection.axis(axis_map[:j0_y])
@@ -60,7 +66,7 @@ module Artoo
 
         x1 = connection.axis(axis_map[:j1_x])
         y1 = connection.axis(axis_map[:j1_y])
-        publish_joystick(1, x1, y1)        
+        publish_joystick(1, x1, y1)
 
         handle_trigger
       end
