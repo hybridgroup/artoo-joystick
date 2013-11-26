@@ -4,7 +4,7 @@ module Artoo
   module Drivers
     # The Xbox360 controller driver behaviors
     class Xbox360 < Artoo::Drivers::Joystick
-      TATTIEBOGLE_MAP = {
+      OSX_MAP = {
         :button_map => {
           0 => :dpad_up,
           1 => :dpad_down,
@@ -103,8 +103,8 @@ module Artoo
       end
 
       def get_map
-        if additional_params[:usb_driver] == :tattiebogle
-          TATTIEBOGLE_MAP
+        if additional_params[:usb_driver] == :osx
+          OSX_MAP
         else
           DEFAULT_MAP
         end

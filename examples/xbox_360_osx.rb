@@ -1,7 +1,7 @@
 require 'artoo'
 
 connection :joystick, :adaptor => :joystick
-device :controller, :driver => :xbox360, :connection => :joystick, :interval => 0.1, :usb_driver => :tattiebogle
+device :controller, :driver => :xbox360, :connection => :joystick, :interval => 0.1, :usb_driver => :osx
 
 work do
   on controller, :joystick_0 => proc { |*value|
