@@ -4,52 +4,6 @@ module Artoo
   module Drivers
     # The Xbox360 controller driver behaviors
     class Xbox360 < Artoo::Drivers::Joystick
-      OSX_MAP = {
-        :button_map => {
-          0 => :dpad_up,
-          1 => :dpad_down,
-          2 => :dpad_left,
-          3 => :dpad_right,
-          4 => :start,
-          5 => :back,
-          6 => :j0,
-          7 => :j1,
-          8 => :lb,
-          9 => :rb,
-          10 => :xbox,
-          11 => :a,
-          12 => :b,
-          13 => :x,
-          14 => :y
-        },
-        :axis_map => {
-          :j0_x => 0,
-          :j0_y => 1,
-          :j1_x => 2,
-          :j1_y => 3,
-          :lt => 4,
-          :rt => 5
-        }
-      }
-
-      DEFAULT_MAP = {
-        :button_map => {
-          0 => :a,
-          1 => :b,
-          2 => :x,
-          3 => :y,
-          4 => :lb,
-          5 => :rb,
-          6 => :back,
-          7 => :start
-        },
-        :axis_map => {
-          :j0_x => 0,
-          :j0_y => 1,
-          :j1_x => 3,
-          :j1_y => 4
-        }
-      }
 
       def currently_pressed?(b)
         if button_map.has_value?(b)
@@ -95,20 +49,13 @@ module Artoo
       end
 
       def button_map
-        get_map[:button_map]
+        BINDING_MAP[:xbox360][:button_map]
       end
 
       def axis_map
-        get_map[:axis_map]
+        BINDING_MAP[:xbox360][:axis_map]
       end
 
-      def get_map
-        if additional_params[:usb_driver] == :osx
-          OSX_MAP
-        else
-          DEFAULT_MAP
-        end
-      end
     end
   end
 end

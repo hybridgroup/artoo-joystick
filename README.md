@@ -47,19 +47,15 @@ end
 
 Plug your USB joystick or game controller into your USB port. If your device is supported by SDL, you are now ready.
 
-### XBox 360 Controllers on Mac OS X
+### Additional XBox 360 Controller Information
 
-Mac OS X does not provide native support for XBox 360 controllers. A third-party driver is available from http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
-
-When using this driver, add `:usb_driver => :tattiebogle` to your device declaration.
-
-Trigger button events are published to trigger_lt and trigger_rt for the XBox 360 controller.
+Trigger button events are published to :trigger_lt and :trigger_rt for the XBox 360 controller.
 
 ```ruby
 require 'artoo'
 
 connection :joystick, :adaptor => :joystick
-device :controller, :driver => :xbox360, :connection => :joystick, :interval => 0.1, :usb_driver => :tattiebogle
+device :controller, :driver => :xbox360, :connection => :joystick, :interval => 0.1
 
 work do
   on controller, :trigger_lt => proc { |*value|
@@ -70,6 +66,10 @@ work do
   }
 end
 ```
+
+### XBox 360 Controller Mac OS X driver
+
+Mac OS X does not provide native support for XBox 360 controllers. A third-party driver is available from http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
 
 ## Contributing
 

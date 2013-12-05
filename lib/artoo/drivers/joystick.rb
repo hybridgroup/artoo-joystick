@@ -4,12 +4,24 @@ module Artoo
   module Drivers
     # The sdl-joystick driver behaviors
     class Joystick < Driver
+      include Artoo::Utility
+
       COMMANDS = [:currently_pressed?].freeze
 
       attr_reader :button_values
 
       # Start driver and any required connections
       def start_driver
+        puts os
+        case os
+        when :linux
+          require 'artoo/drivers/linux_binding_map'
+        when :macosx
+          require 'artoo/drivers/macosx_binding_map'
+        else
+          # raise error ?
+        end
+
         @button_values = {}
 
         begin
