@@ -1,6 +1,6 @@
 # Artoo Adaptor For Joysticks & Game Controllers
 
-This repository contains the Artoo (http://artoo.io/) adaptor for the PS3 game controller, XBox360 game controller, or any other joysticks and game controllers that are compatible with Simple DirectMedia Layer (SDL) (http://www.libsdl.org/). 
+This repository contains the Artoo (http://artoo.io/) adaptor for the PS3 controller, Xbox 360 controller, or any other joysticks and game controllers that are compatible with Simple DirectMedia Layer (SDL) (http://www.libsdl.org/). 
 
 Artoo is a open source micro-framework for robotics using Ruby.
 
