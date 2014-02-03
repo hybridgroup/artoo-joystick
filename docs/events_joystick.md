@@ -1,0 +1,9 @@
+# Events
+
+## joystick
+
+Get's triggered every "interval" amount of time if a joystick event occured, you can access values x, y, s.
+
+## button
+
+Get's triggered every "interval" amount of time if the button was pressed, you can access the value of the pressed button.
