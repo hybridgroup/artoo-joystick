@@ -1,9 +1,10 @@
 GIT
-  remote: git://github.com/mikejford/ruby-sdl-ffi
-  revision: 3a8e6d84d49b334eb298ee4a9b7012d47b070df5
+  remote: git://github.com/hybridgroup/ruby-sdl-ffi.git
+  revision: ef5c3d583f849158c8d42216bf344687cfe153fd
+  branch: master
   specs:
     hybridgroup-ruby-sdl-ffi (0.4.1)
-      nice-ffi (>= 0.2)
+      nice-ffi
 
 PATH
   remote: .
