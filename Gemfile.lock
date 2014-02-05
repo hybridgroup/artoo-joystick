@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/mikejford/ruby-sdl-ffi
+  revision: 3a8e6d84d49b334eb298ee4a9b7012d47b070df5
+  specs:
+    hybridgroup-ruby-sdl-ffi (0.4.1)
+      nice-ffi (>= 0.2)
+
 PATH
   remote: .
   specs:
@@ -21,15 +28,11 @@ GEM
     celluloid-io (0.15.0)
       celluloid (>= 0.15.0)
       nio4r (>= 0.5.0)
-    coderay (1.0.9)
-    ffi (1.9.0)
-    ffi (1.9.0-java)
+    coderay (1.1.0)
+    ffi (1.9.3)
     http (0.5.0)
       http_parser.rb
     http_parser.rb (0.6.0.beta.2)
-    http_parser.rb (0.6.0.beta.2-java)
-    hybridgroup-ruby-sdl-ffi (0.4.1)
-      nice-ffi (>= 0.2)
     metaclass (0.0.1)
     method_source (0.8.2)
     minitest (5.0.8)
@@ -40,16 +43,10 @@ GEM
     nice-ffi (0.4)
       ffi (>= 0.5.0)
     nio4r (0.5.0)
-    nio4r (0.5.0-java)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
+    pry (0.9.12.3)
+      coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    pry (0.9.12.2-java)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
-      spoon (~> 0.0)
     rake (10.1.0)
     reel (0.4.0)
       celluloid (>= 0.15.1)
@@ -58,19 +55,17 @@ GEM
       http_parser.rb (>= 0.6.0.beta.2)
       websocket_parser (>= 0.1.4)
     slop (3.4.6)
-    spoon (0.0.4)
-      ffi
     thor (0.18.1)
     timers (1.1.0)
     websocket_parser (0.1.4)
       http
 
 PLATFORMS
-  java
   ruby
 
 DEPENDENCIES
   artoo-joystick!
+  hybridgroup-ruby-sdl-ffi!
   minitest (>= 5.0)
   minitest-happy
   mocha (>= 0.14.0)
