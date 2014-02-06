@@ -12,9 +12,23 @@ The artoo-joystick adaptor uses the ruby-sdl-ffi gem (https://github.com/hybridg
 
 ## Installing
 
+### OSX
+
 ```
+brew install sdl
 gem install artoo-joystick
 ```
+
+Mac OS X does not provide native support for XBox 360 controllers. A third-party driver is available from http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
+
+
+### Ubuntu
+
+```
+sudo apt-get install libsdl1.2-dev
+gem install artoo-joystick
+```
+
 
 ## Using
 
@@ -67,14 +81,18 @@ work do
 end
 ```
 
-### XBox 360 Controller Mac OS X driver
-
-Mac OS X does not provide native support for XBox 360 controllers. A third-party driver is available from http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
-
 ## Contributing
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+* All patches must be provided under the Apache 2.0 License
+* Please use the -s option in git to "sign off" that the commit is your work and you are providing it under the Apache 2.0 License
+* Submit a Github Pull Request to the appropriate branch and ideally discuss the changes with us in IRC.
+* We will look at the patch, test it out, and give you feedback.
+* Avoid doing minor whitespace changes, renamings, etc. along with merged content. These will be done by the maintainers from time to time but they can complicate merges and should be done seperately.
+* Take care to maintain the existing coding style.
+* Add unit tests for any new or changed functionality.
+* All pull requests should be "fast forward"
+  * If there are commits after yours use “git rebase -i <new_head_branch>”
+  * If you have local changes you may need to use “git stash”
+  * For git help see [progit](http://git-scm.com/book) which is an awesome (and free) book on git
+
+(c) 2013-2014 The Hybrid Group
