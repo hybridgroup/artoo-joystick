@@ -1,22 +1,14 @@
-GIT
-  remote: git://github.com/hybridgroup/ruby-sdl-ffi.git
-  revision: ef5c3d583f849158c8d42216bf344687cfe153fd
-  branch: master
-  specs:
-    hybridgroup-ruby-sdl-ffi (0.4.1)
-      nice-ffi
-
 PATH
   remote: .
   specs:
     artoo-joystick (0.3.0)
       artoo (>= 1.4.0)
-      hybridgroup-ruby-sdl-ffi
+      hybridgroup-ruby-sdl-ffi (~> 0.4.2)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    artoo (1.4.1)
+    artoo (1.5.0)
       celluloid (~> 0.15.0)
       celluloid-io (~> 0.15.0)
       multi_json (~> 1.6)
@@ -33,40 +25,40 @@ GEM
     ffi (1.9.3)
     http (0.5.0)
       http_parser.rb
-    http_parser.rb (0.6.0.beta.2)
-    metaclass (0.0.1)
+    http_parser.rb (0.6.0)
+    hybridgroup-ruby-sdl-ffi (0.4.2)
+      nice-ffi
+    metaclass (0.0.2)
     method_source (0.8.2)
-    minitest (5.0.8)
+    minitest (5.2.2)
     minitest-happy (1.0.0)
-    mocha (0.14.0)
+    mocha (1.0.0)
       metaclass (~> 0.0.1)
-    multi_json (1.8.2)
+    multi_json (1.8.4)
     nice-ffi (0.4)
       ffi (>= 0.5.0)
-    nio4r (0.5.0)
-    pry (0.9.12.3)
+    nio4r (1.0.0)
+    pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
-    rake (10.1.0)
+    rake (10.1.1)
     reel (0.4.0)
       celluloid (>= 0.15.1)
       celluloid-io (>= 0.15.0)
       http (>= 0.5.0)
       http_parser.rb (>= 0.6.0.beta.2)
       websocket_parser (>= 0.1.4)
-    slop (3.4.6)
+    slop (3.4.7)
     thor (0.18.1)
     timers (1.1.0)
-    websocket_parser (0.1.4)
-      http
+    websocket_parser (0.1.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   artoo-joystick!
-  hybridgroup-ruby-sdl-ffi!
   minitest (>= 5.0)
   minitest-happy
   mocha (>= 0.14.0)
