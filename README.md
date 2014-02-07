@@ -81,6 +81,14 @@ work do
 end
 ```
 
+## Documentation
+
+Check out our [documentation](http://artoo.io/documentation/) for lots of information about how to use Artoo.
+
+## IRC
+
+Need more help? Just want to say "Hello"? Come visit us on IRC freenode #artoo
+
 ## Contributing
 
 * All patches must be provided under the Apache 2.0 License
@@ -95,4 +103,5 @@ end
   * If you have local changes you may need to use “git stash”
   * For git help see [progit](http://git-scm.com/book) which is an awesome (and free) book on git
 
-(c) 2013-2014 The Hybrid Group
+
+(c) 2012-2014 The Hybrid Group
