@@ -1,7 +1,7 @@
 require 'artoo'
 
 connection :joystick, :adaptor => :joystick
-device :controller, :driver => :ouya, :connection => :joystick, :interval => 0.1
+device :controller, :driver => :ouya, :connection => :joystick, :interval => 0.01
 
 work do
   on controller, :joystick => proc { |*value|

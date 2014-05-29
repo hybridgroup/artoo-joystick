@@ -16,17 +16,11 @@ module Artoo
       def handle_joystick
         x0 = connection.axis(axis_map[:j0_x])
         y0 = connection.axis(axis_map[:j0_y])
-        if x0 & y0 == -32768
-        else
-          publish_joystick(0, x0, y0)
-        end
+        publish_joystick(0, x0, y0)
 
         x1 = connection.axis(axis_map[:j1_x])
         y1 = connection.axis(axis_map[:j1_y])
-        if x1 & y1 == -32768
-        else
-          publish_joystick(1, x1, y1)
-        end
+        publish_joystick(1, x1, y1)
       end
 
       def publish_button(b)
