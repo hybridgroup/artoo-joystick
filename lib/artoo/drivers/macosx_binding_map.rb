@@ -52,5 +52,27 @@ BINDING_MAP = {
       :lt => 4,
       :rt => 5
     }
+  },
+  :ouya => {
+    :button_map => {
+      3 => :o,
+      4 => :u,
+      5 => :y,
+      6 => :a,
+      7 => :lt,
+      8 => :rt,
+      11 => :dpad_up,
+      12 => :dpad_down,
+      13 => :dpad_left,
+      14 => :dpad_right,
+      15 => :l2,
+      16 => :r2
+    },
+    :axis_map => {
+      :j0_x => 3,
+      :j0_y => 4,
+      :j1_x => 5,
+      :j1_y => 6,
+    }
   }
 }
