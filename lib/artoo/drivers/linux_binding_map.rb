@@ -39,5 +39,29 @@ BINDING_MAP = {
       :j1_x => 3,
       :j1_y => 4
     }
+  },
+  :ouya => {
+    :button_map => {
+      0 => :o,
+      1 => :u,
+      2 => :y,
+      3 => :a,
+      4 => :l1,
+      12 => :l2,
+      5 => :r1,
+      13 => :r2,
+      8 => :dpad_up,
+      9 => :dpad_down,
+      10 => :dpad_left,
+      11 => :dpad_right,
+      6 => :left_joystick,
+      7 => :right_joystick
+    },
+    :axis_map => {
+      :j0_x => 3,
+      :j0_y => 4,
+      :j1_x => 0,
+      :j1_y => 1
+    }
   }
 }
